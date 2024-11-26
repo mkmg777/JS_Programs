@@ -75,11 +75,31 @@ console.log(distribution1('mmmmnn'))
 //find the repeating characters in a string o/p=['d','c']
 function findRepeating(str){
     const result={}
+    const output=[]
     for(let i=0;i<str.length;i++){
         if(str[i] in result){
-            result[str[i]]
+            result[str[i]]+=1
+        }
+        else{
+            result[str[i]]=1
         }
     }
+    for (let key in result){
+        if(result[key]>1){
+            output.push(key)
+        }
+    }
+    return output
 }
 
 console.log(findRepeating('dctdcdc'))
+
+//find the sum of values in the object
+const arr={a:10,b:20,c:30}
+const r5=Object.values(arr).reduce((acc,cv)=>acc+cv,0)
+console.log(r5)
+
+//print all the key value pairs using for loop
+for(let key in arr){
+    console.log(key,arr[key])
+}
