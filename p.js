@@ -175,3 +175,102 @@ if(count1 ==2){
 
 
 // GCD of  the number 9 and 12
+  
+// repet the string
+const s='megha'
+const r4=s.repeat(2)
+console.log(r4)
+
+// pattern printing
+
+// for( let i=0;i<4;i++){
+//     let row=""
+//     for(let j=0;j<4;j++){
+//         row+="*" 
+//     }
+//     console.log(row)
+// }
+
+// parttern printing in increasing order
+ function pattern(n) {
+    for(let i = 0; i < n; i++) {
+        let row1 = "";
+        for(let j = 0; j <= i; j++) {
+            row1 += "*";
+        }
+        console.log(row1);
+    }
+}
+pattern(3)
+
+// numbers pattern
+
+function numpat(n){
+    for(let i=1;i<n;i++){
+        let row=0
+        for(let j=1;j<=i;j++){
+            row=row+j + " "
+        }
+        console.log(row)
+    }
+}
+numpat(5)
+
+function numpattern(n){
+    for(let i=1;i<n;i++){
+        let row=0
+        for(let j=1;j<=i;j++){
+            row=row+i + " "
+            
+        }
+        console.log(row)
+        
+    }
+}
+numpattern(5)
+
+ function patternn(n) {
+    for(let i = 0; i < n; i++) {
+        let row1 = "";
+        for(let j = 0; j <= i; j++) {
+            row1 +="*";
+        }
+        console.log(row1);
+    }
+}
+patternn(3)
+
+ function patternns(n) {
+    for(let i = 0; i < n; i++) {
+        let row1 = "";
+        for(let j = 0; j <n-i-1; j++) {
+            row1 =row1+" "
+        }
+        for(let j = 0; j < 2*i-1; j++){
+            row1+="*"
+        }
+        for(let j = 0; j < n-i-1; j++) {
+            row1 =row1+" "
+        }
+        console.log(row1);
+    }
+}
+patternns(5)
+
+console.log("khj")
+function pa(n) {
+    for(let i = 0; i < n; i++) {
+        let row1 = "";
+        for(let j = 0; j <=i; j++) {
+            row1 =row1+" "
+        }
+        for(let j = 0; j < 2*n -(2*i+1); j++){
+            row1+="*"
+        }
+        for(let j = 0; j < i; j++) {
+            row1 =row1+" "
+        }
+        console.log(row1);
+    }
+}
+pa(5)
