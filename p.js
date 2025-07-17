@@ -274,3 +274,54 @@ function pa(n) {
     }
 }
 pa(5)
+
+// factorial of a number
+
+function factorialNumber(num){
+    let result=1
+    for(let i=2;i<=num;i++){
+        result=result*i
+    }return result
+}
+console.log(factorialNumber(3))
+
+// Check if a String Contains Another String in JavaScript?
+function Anotherstring(str1,str2){
+    if(str1.includes(str2)){
+        return true
+    }else{
+        return false
+    }
+}
+console.log(Anotherstring("HiHello","Hi"))
+console.log(Anotherstring("HiHello","Ho"))
+
+// Remove falsy Values from an array in JavaScript?
+const falsyValue=['',0,false,NaN,undefined]
+function values(arr){
+    let res=[]
+    for(let i=0;i<arr.length;i++){
+        // if(arr[i]){
+        //     res.push(arr[i])
+        // }
+         if(!falsyValue.includes(arr[i])){
+            res.push(arr[i])
+        }
+        
+    }return res
+}
+console.log(values([1,'',3,0]))
+
+// Find the maximum difference between two numbers in an array in JavaScript?
+
+function maxDifference(arr){
+    let mindiff=arr[0],maxDiff=0
+    for(let i=1;i<arr.length;i++){
+        diff=arr[i]-mindiff
+        maxDiff=Math.max(maxDiff,diff)
+        mindiff=Math.min(mindiff,arr[i])
+    }
+    // return maxDiff
+    return mindiff
+}
+console.log(maxDifference([1, 2, 90, 10, 110]));
